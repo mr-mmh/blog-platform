@@ -1,19 +1,28 @@
+import {nextui} from '@nextui-org/theme';
 import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./node_modules/@nextui-org/theme/dist/components/(button|ripple|spinner).js"
   ],
-  theme: {
-    extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
+    theme: {
+        extend: {
+            screens: {
+                xs: "375px",
+            },
+            container: {
+                center: true,
+            },
+            fontFamily: {
+                iYekan: "var(--font-iYekan)",
+            },
+            fontWeight: {
+                extraBlack: "1000",
+            },
+        },
     },
-  },
-  plugins: [],
+  plugins: [nextui()],
 };
 export default config;

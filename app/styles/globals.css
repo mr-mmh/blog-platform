@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    /* add this class for use persian numbers */
+    .ss02 {
+        -moz-font-feature-settings: "ss02";
+        -webkit-font-feature-settings: "ss02";
+        font-feature-settings: "ss02";
+    }
+    /* add this class for use monospace persian numbers */
+    .ss03 {
+        -moz-font-feature-settings: "ss03";
+        -webkit-font-feature-settings: "ss03";
+        font-feature-settings: "ss03";
+    }
+}
