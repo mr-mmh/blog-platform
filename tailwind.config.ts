@@ -1,12 +1,12 @@
-import {nextui} from '@nextui-org/theme';
+import { nextui } from "@nextui-org/theme";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: [
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./node_modules/@nextui-org/theme/dist/components/(button|ripple|spinner).js"
-  ],
+    content: [
+        "./components/**/*.{ts,tsx}",
+        "./app/**/*.{ts,tsx}",
+        "./node_modules/@nextui-org/theme/dist/components/(button|input|ripple|spinner).js",
+    ],
     theme: {
         extend: {
             screens: {
@@ -14,6 +14,9 @@ const config: Config = {
             },
             container: {
                 center: true,
+                padding: {
+                    DEFAULT: "0.5rem",
+                },
             },
             fontFamily: {
                 iYekan: "var(--font-iYekan)",
@@ -23,6 +26,6 @@ const config: Config = {
             },
         },
     },
-  plugins: [nextui()],
+    plugins: [nextui()],
 };
 export default config;

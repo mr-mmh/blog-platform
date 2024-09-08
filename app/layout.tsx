@@ -15,12 +15,8 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html
-            className={`${iYekanFont.variable} antialiased`}
-            lang="fa"
-            dir="rtl"
-        >
-            <body className="font-iYekan ss02">
+        <html className={`${iYekanFont.variable} antialiased`} lang="fa" dir="rtl">
+            <body className="ss02 font-iYekan text-base tracking-tight">
                 <Providers>{children}</Providers>
             </body>
         </html>
